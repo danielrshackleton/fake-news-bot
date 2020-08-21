@@ -2,7 +2,7 @@
 
 This is a reddit bot which scrapes a news article when posted to any of a number of subreddits, and analyzes it for fake news with 96% accuracy (deviates roughly 0.5% each way). The training dataset used contains 20,799 articles.
 
-### Built with
+### Built with:
 #### Web Scraping
 - BeautifulSoup4
 - Requests
