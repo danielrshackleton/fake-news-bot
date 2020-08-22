@@ -25,4 +25,8 @@ $ pipenv install
 ```
 
 # Usage
-To use the article analysis functionality, simply comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run.
+### In Reddit
+To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot`
+
+### To use custom URL links outside of Reddit
+To use the article analysis functionality, simply clone the repository, comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run.
