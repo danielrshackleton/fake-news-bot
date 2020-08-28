@@ -10,6 +10,7 @@ This is a reddit bot which scrapes a news article when posted to any of a number
 #### Machine Learning
 - Pandas
 - Scikit-learn (sklearn)
+- Pickle
 
 #### Reddit bot connection
 - Praw
