@@ -1,6 +1,6 @@
 # fake-news-bot
 
-This is a reddit bot which scrapes a news article when posted to any of a number of subreddits, and analyzes it for fake news with roughly 80% accuracy on unseen articles. The Passive Aggressive Classifier runs on a training dataset of 20,799 articles found [here](https://www.kaggle.com/c/fake-news/data?select=train.csv).
+This is a reddit bot which scrapes a news article when posted to any of a number of subreddits, and analyzes language patterns using machine learning packages for bias and reliability with roughly 80% accuracy on unseen articles. The Passive Aggressive Classifier runs on a training dataset of 20,799 articles found [here](https://www.kaggle.com/c/fake-news/data?select=train.csv).
 
 ### Built with:
 #### Web Scraping
