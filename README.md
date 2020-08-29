@@ -25,7 +25,7 @@ $ git clone https://github.com/danielrshackleton/fake-news-bot.git
 $ pipenv install
 ```
 
-# Usage
+## Usage
 ### In Reddit
 To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` within the specified subreddits (r/worldnews for now). *Important: this program is not currently running on a private server so will not currently reply*.
 
