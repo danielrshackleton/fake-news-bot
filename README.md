@@ -1,6 +1,6 @@
 # fake-news-bot
 
-This is a reddit bot which scrapes a news article when posted to any of a number of subreddits, and analyzes it for fake news with 96% accuracy (deviates roughly 0.5% each way). The training dataset used contains 20,799 articles.
+This is a reddit bot which scrapes a news article when posted to any of a number of subreddits, and analyzes it for fake news with roughly 80% accuracy on unseen articles. The Passive Aggressive Classifier runs on a training dataset of 20,799 articles found [here](https://www.kaggle.com/c/fake-news/data?select=train.csv).
 
 ### Built with:
 #### Web Scraping
@@ -27,7 +27,10 @@ $ pipenv install
 
 # Usage
 ### In Reddit
-To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot`
+To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` within the specified subreddits (r/worldnews for now). *Important: this program is not currently running on a private server so will not currently reply*.
 
 ### To use custom URL links outside of Reddit
-To use the article analysis functionality, simply clone the repository, comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run.
+
+This program uses pickled Passive Aggressive Classifier and Vectorizer objects. If there is an issue with these, download train.csv from here and move to the data_set directory (file is too large for GitHub upload limits). 
+
+To use the article analysis functionality, simply clone the repository, comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run. 
