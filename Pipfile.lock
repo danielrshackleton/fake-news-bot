@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "36b4ae92054092e24890e76b4a2140a32f593971cab50bae42fe0bb7fe5c7cbc"
+            "sha256": "1a1c3bb4178db071d2f0482ad23166ef990076f91a9996c2aaa8ff916ecd992c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -107,6 +107,21 @@
             "index": "pypi",
             "version": "==1.1.1"
         },
+        "praw": {
+            "hashes": [
+                "sha256:6b93ad1e53385c68753203ec87f4d0053b2425b09fc8813847800a542efdfe6c",
+                "sha256:fb55e46203a771342da7cbe144fbcd8c61d825719ce1025bdd72112194a0228f"
+            ],
+            "index": "pypi",
+            "version": "==7.1.0"
+        },
+        "prawcore": {
+            "hashes": [
+                "sha256:1f1eafc8a65d671f9892354f73142014fbb5d3a9ee621568c662d0a354e0578b",
+                "sha256:672d8a2faa12b44307874b2acfdd27f9cbaa5fa37bada4b34e36277224e6d8ed"
+            ],
+            "version": "==1.5.0"
+        },
         "python-dateutil": {
             "hashes": [
                 "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
@@ -193,12 +208,26 @@
             ],
             "version": "==2.1.0"
         },
+        "update-checker": {
+            "hashes": [
+                "sha256:6a2d45bb4ac585884a6b03f9eade9161cedd9e8111545141e9aa9058932acb13",
+                "sha256:cbba64760a36fe2640d80d85306e8fe82b6816659190993b7bdabadee4d4bbfd"
+            ],
+            "version": "==0.18.0"
+        },
         "urllib3": {
             "hashes": [
                 "sha256:91056c15fa70756691db97756772bb1eb9678fa585d9184f24534b100dc60f4a",
                 "sha256:e7983572181f5e1522d9c98453462384ee92a0be7fac5f1413a1e35c56cc0461"
             ],
             "version": "==1.25.10"
+        },
+        "websocket-client": {
+            "hashes": [
+                "sha256:0fc45c961324d79c781bab301359d5a1b00b13ad1b10415a4780229ef71a5549",
+                "sha256:d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010"
+            ],
+            "version": "==0.57.0"
         }
     },
     "develop": {}
