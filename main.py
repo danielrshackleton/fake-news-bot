@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from functions import analyzer, scraper, reddit_conn
 
 
