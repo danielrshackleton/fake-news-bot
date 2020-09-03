@@ -33,4 +33,4 @@ To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` within the spe
 
 This program uses pickled Passive Aggressive Classifier and Vectorizer objects. If there is an issue with these, download train.csv from [here](https://www.kaggle.com/c/fake-news/data?select=train.csv) and move to the data_set directory. 
 
-To use the article analysis functionality, simply clone the repository, comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run. 
+To use only the article analysis functionality locally: clone the repository, comment out `reddit_conn.connect()` on `fake_news.py` and uncomment `test_run()`, then swap out out the URL string for your article URL and run. 
