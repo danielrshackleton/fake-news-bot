@@ -14,7 +14,7 @@ def connect():
 
     already_replied = load_pickle()
 
-    subreddit = reddit.subreddit('worldnews+news+politics+testingground4bots')
+    subreddit = reddit.subreddit('testingground4bots')
 
     # phrase to activate the bot
     keyphrase = '!FakeNewsBot'
