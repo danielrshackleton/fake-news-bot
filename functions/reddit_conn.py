@@ -44,6 +44,7 @@ def connect():
                 pass
             except TypeError:
                 msg = 'Oops, looks like something has gone wrong. Please try again in a few minutes.'
+                print(msg)
                 form_reply(comment, msg)
 
 
