@@ -31,6 +31,6 @@ To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` within the spe
 
 ### To use custom URL links outside of Reddit
 
-This program uses pickled Passive Aggressive Classifier and Vectorizer objects. If there is an issue with these, download train.csv from here and move to the data_set directory (file is too large for GitHub upload limits). 
+This program uses pickled Passive Aggressive Classifier and Vectorizer objects. If there is an issue with these, download train.csv from [here](https://www.kaggle.com/c/fake-news/data?select=train.csv) and move to the data_set directory. 
 
 To use the article analysis functionality, simply clone the repository, comment out the reddit connection on `main.py`, swap out out the URL string for your article URL and run. 
