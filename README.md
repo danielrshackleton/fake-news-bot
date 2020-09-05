@@ -27,7 +27,7 @@ $ pipenv install
 
 ## Usage
 ### In Reddit
-To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` within the specified subreddits (r/worldnews, r/politics, and r/news).
+To call FakeNewsBot on a reddit post, just comment `!FakeNewsBot` on r/worldnews (will be adding additional subreddits soon).
 
 ### To use custom URL links outside of Reddit
 
