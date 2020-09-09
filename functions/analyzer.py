@@ -12,6 +12,7 @@ train_file = os.path.join(THIS_FOLDER, '../data_set/train.csv')
 
 def reanalyze(article_text):
     df = pd.read_csv(train_file)
+    # df = pd.read_csv('C:\\Users\\danie\\Downloads\\news.csv')
 
     # Change the labels
     df.loc[(df['label'] == 1), ['label']] = 'FAKE'
@@ -20,9 +21,11 @@ def reanalyze(article_text):
     labels = df.label
     x_train, x_test, y_train, y_test = train_test_split(df['text'],
                                                         labels,
-                                                        test_size=0.27,
+                                                        test_size=0.2,
                                                         random_state=7,
                                                         shuffle=True)
+
+    print(f'df.shape: {df.shape} \ndf.head: {df.head()}')
 
     # Initialize a TfidfVectorizer, vectorize the text
     tfidf_vectorizer = TfidfVectorizer(stop_words='english', max_df=0.7)
@@ -47,7 +50,7 @@ def reanalyze(article_text):
     print(f'Accuracy: {rounded_score}')
 
     result = 'reliable content' if y_pred_new[0] == 'REAL' else 'unreliable content'
-    str = f'Brrrrr, calculating... There is a good chance that this is **{result}**.'
+    str = f'Brrrrr, calculating... There is a good chance that this is {result}.'
     save_pickle(pac, tfidf_vectorizer)
 
     return str
@@ -75,5 +78,4 @@ def analyze(article_text):
 def save_pickle(pac, vectorizer):
     pickle.dump(pac, open('pac.pickle', 'wb'))
     pickle.dump(vectorizer, open('vectorizer.pickle', 'wb'))
-
 
