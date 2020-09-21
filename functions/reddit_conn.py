@@ -21,42 +21,43 @@ def connect():
     keyphrase = '!FakeNewsBot'
 
     # for comment in subreddit.stream.comments():
-    for comment in reddit.subreddit('worldnews').stream.comments(skip_existing=True):
-        print(comment.body)
-        try:
-            # Skip comment if no article URL found
-            if comment.submission.url and comment.body:
-                url = comment.submission.url
-            else:
-                continue
+    while True:
+        for comment in reddit.subreddit('worldnews').stream.comments(skip_existing=True):
+            print(comment.body)
+            try:
+                # Skip comment if no article URL found
+                if comment.submission.url and comment.body:
+                    url = comment.submission.url
+                else:
+                    continue
 
-            comment_id = [comment.submission, comment]
+                comment_id = [comment.submission, comment]
 
-            # If bot is called and has not already replied to comment, scan article and reply
-            if keyphrase in comment.body and comment_id not in already_replied:
-                article_text = scraper.get_data(url)
-                result = analyzer.analyze(article_text)
+                # If bot is called and has not already replied to comment, scan article and reply
+                if keyphrase in comment.body and comment_id not in already_replied:
+                    article_text = scraper.get_data(url)
+                    result = analyzer.analyze(article_text)
+                    form_reply(comment, result)
+                    already_replied.append(comment_id)
+                    save_pickle(already_replied)
+
+            except praw.exceptions.RedditAPIException as e:
+                num_str = re.findall(r'\d+', str(e))
+                num = int(num_str[0])
+                if 'seconds' in str(e):
+                    print(f"Replying too much, trying again in {num + 10} seconds.")
+                    time.sleep(num+10)
+                else:
+                    print(f"Replying too much, trying again in {num + 1} minutes.")
+                    time.sleep((num+1)*60)
                 form_reply(comment, result)
                 already_replied.append(comment_id)
                 save_pickle(already_replied)
-
-        except praw.exceptions.RedditAPIException as e:
-            num_str = re.findall(r'\d+', str(e))
-            num = int(num_str[0])
-            if 'seconds' in str(e):
-                print(f"Replying too much, trying again in {num + 10} seconds.")
-                time.sleep(num+10)
-            else:
-                print(f"Replying too much, trying again in {num + 1} minutes.")
-                time.sleep((num+1)*60)
-            form_reply(comment, result)
-            already_replied.append(comment_id)
-            save_pickle(already_replied)
-            pass
-        except TypeError:
-            msg = 'Oops, looks like something has gone wrong. Please try again in a few minutes.'
-            form_reply(comment, msg)
-            pass
+                pass
+            except TypeError:
+                msg = 'Oops, looks like something has gone wrong. Please try again in a few minutes.'
+                form_reply(comment, msg)
+                pass
 
 
 # Load 'replied.pickle' object and comments list, otherwise create new pickle
