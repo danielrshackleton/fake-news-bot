@@ -13,7 +13,7 @@ This is a machine learning project which runs on a Reddit bot. It scrapes a news
 - Pickle
 
 #### Reddit bot connection
-- Praw
+- PRAW
 
 # Getting Started
 ### Prerequisites
