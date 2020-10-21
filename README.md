@@ -17,12 +17,13 @@ This is a machine learning project which runs on a Reddit bot. It scrapes a news
 
 # Getting Started
 ### Prerequisites
-- Pipenv
+- Python 3
+- Pip
 
 ### Installation
 ```
 $ git clone https://github.com/danielrshackleton/fake-news-bot.git
-$ pipenv install
+$ pip install -r requirements.txt
 ```
 
 ## Usage
