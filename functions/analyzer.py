@@ -69,8 +69,8 @@ def analyze(article_text):
     vec_new = tfidf_vectorizer.transform([article_text])
     y_pred_new = pac.predict(vec_new)
 
-    result = 'reliable content' if y_pred_new[0] == 'REAL' else 'unreliable content'
-    str = f'Brrrrr, calculating... There is a good chance that this is {result}.'
+    result = 'unbiased language' if y_pred_new[0] == 'REAL' else 'biased language'
+    str = f'Brrrrr, calculating... There is a good chance that this contains {result}.'
 
     return str
 
