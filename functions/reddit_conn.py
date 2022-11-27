@@ -97,7 +97,7 @@ def form_reply(comment, result):
 _____ 
 
 This bot scrapes news articles and analyzes language patterns 
-using machine learning packages for bias and misinformation with roughly 80% accuracy on unseen articles.
+using machine learning packages for bias and misinformation.
 
 The Passive Aggressive Classifier runs on a training dataset of 20,799 articles found
 [here](https://www.kaggle.com/c/fake-news/data?select=train.csv), and the  source code can be found
